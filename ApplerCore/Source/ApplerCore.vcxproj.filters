@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ApplerCore">
+      <UniqueIdentifier>{9282FBFC-7E3A-3D4A-E741-16A6D318D83A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ApplerCore\Display">
+      <UniqueIdentifier>{F71B3238-E3FF-F28D-4C60-EDE03863DD0F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor">
+      <UniqueIdentifier>{935FDCD7-7F01-07AE-68BC-1A0254FD8DFE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\GLAD">
+      <UniqueIdentifier>{FACDD015-6683-490B-EF77-43E25B2C400F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\ImGUIZMO">
+      <UniqueIdentifier>{B3DE3CE1-1F6A-AAA5-287B-2D9A948506A6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\STB_IMAGE">
+      <UniqueIdentifier>{ED66B019-D95F-CF6B-0292-B4F0EEE9AE77}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Vendor\ImGUIZMO\ImGuizmo.h">
+      <Filter>Vendor\ImGUIZMO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Vendor\STB_IMAGE\stb_image.h">
+      <Filter>Vendor\STB_IMAGE</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\Display\NativeDisplay.h">
+      <Filter>ApplerCore\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="arpch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Vendor\GLAD\glad.c">
+      <Filter>Vendor\GLAD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Vendor\ImGUIZMO\ImGuizmo.cpp">
+      <Filter>Vendor\ImGUIZMO</Filter>
+    </ClCompile>
+    <ClCompile Include="Appler.cpp" />
+    <ClCompile Include="ApplerCore\Display\NativeDisplay.cpp">
+      <Filter>ApplerCore\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="arpch.cpp" />
+    <ClCompile Include="stb_image.cpp" />
+  </ItemGroup>
+</Project>

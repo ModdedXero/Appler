@@ -1,6 +1,6 @@
 workspace "Appler"
 	architecture "x64"
-	startproject "Appler"
+	startproject "ApplerCore"
 	
 	configurations
 	{
@@ -12,41 +12,43 @@ workspace "Appler"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}"
 
 IncludeDir = {}
-IncludeDir["GLFW"] = "Appler/Vendor/GLFW/include"
-IncludeDir["GLAD"] = "Appler/Vendor/GLAD/include"
-IncludeDir["GLM"] = "Appler/Vendor/GLM"
-IncludeDir["ImGUI"] = "Appler/Vendor/ImGUI"
-IncludeDir["ImGUIZMO"] = "Appler/Vendor/ImGUIZMO"
-IncludeDir["STB_IMAGE"] = "Appler/Vendor/STB_IMAGE"
+IncludeDir["GLFW"] = "ApplerCore/Vendor/GLFW/include"
+IncludeDir["GLAD"] = "ApplerCore/Vendor/GLAD/include"
+IncludeDir["GLM"] = "ApplerCore/Vendor/GLM"
+IncludeDir["ImGUI"] = "ApplerCore/Vendor/ImGUI"
+IncludeDir["ImGUIZMO"] = "ApplerCore/Vendor/ImGUIZMO"
+IncludeDir["STB_IMAGE"] = "ApplerCore/Vendor/STB_IMAGE"
 
-include "Appler/Vendor/GLFW"
-include "Appler/Vendor/ImGUI"
+include "ApplerCore/Vendor/GLFW"
+include "ApplerCore/Vendor/ImGUI"
 	
-project "Appler"
-	location "Appler/Source"
+project "ApplerCore"
+	location "ApplerCore/Source"
 	kind "ConsoleApp"
 	language "C++"
+	cppdialect "C++latest"
+	staticruntime "On"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
 	pchheader "arpch.h"
-	pchsource "Appler/Source/arpch.cpp"
+	pchsource "ApplerCore/Source/arpch.cpp"
 	
 	files
 	{
-		"Appler/Source/**.h",
-		"Appler/Source/**.cpp",
-		"Appler/Vendor/GLAD/**.c",
-		"Appler/Vendor/STB_IMAGE/stb_image.h",
-		"Appler/Vendor/ImGUIZMO/ImGuizmo.h",
-		"Appler/Vendor/ImGUIZMO/ImGuizmo.cpp"
+		"ApplerCore/Source/**.h",
+		"ApplerCore/Source/**.cpp",
+		"ApplerCore/Vendor/GLAD/**.c",
+		"ApplerCore/Vendor/STB_IMAGE/stb_image.h",
+		"ApplerCore/Vendor/ImGUIZMO/ImGuizmo.h",
+		"ApplerCore/Vendor/ImGUIZMO/ImGuizmo.cpp"
 		
 	}
 	
 	includedirs
 	{
-		"Appler/Source",
+		"ApplerCore/Source",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.GLAD}",
 		"%{IncludeDir.GLM}",
@@ -62,13 +64,13 @@ project "Appler"
 		"opengl32.lib"
 	}
 	
-	filter "files:Appler/Vendor/**.c"
+	filter "files:ApplerCore/Vendor/**.c"
 		flags { "NoPCH" }
 		
-	filter "files:Appler/Vendor/**.cpp"
+	filter "files:ApplerCore/Vendor/**.cpp"
 		flags { "NoPCH" }
 		
-	filter "files:Appler/Source/stb_image.cpp"
+	filter "files:ApplerCore/Source/stb_image.cpp"
 		flags { "NoPCH" }
 	
 	filter "system:windows"
@@ -76,7 +78,7 @@ project "Appler"
 		
 		defines
 		{
-			"APPLER_PLATFORM_WINDOWS"
+			"ApplerCore_PLATFORM_WINDOWS"
 		}
 	
 	filter "configurations:Debug"

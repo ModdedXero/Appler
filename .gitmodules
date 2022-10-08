@@ -1,15 +1,15 @@
 [submodule "Appler/Vendor/GLFW"]
-	path = Appler/Vendor/GLFW
+	path = ApplerCore/Vendor/GLFW
 	url = https://github.com/TheCherno/glfw.git
 [submodule "Appler/Vendor/ImGUI"]
-	path = Appler/Vendor/ImGUI
+	path = ApplerCore/Vendor/ImGUI
 	url = https://github.com/TheCherno/imgui.git
 [submodule "Appler/Vendor/ImGUIZMO"]
-	path = Appler/Vendor/ImGUIZMO
+	path = ApplerCore/Vendor/ImGUIZMO
 	url = https://github.com/TheCherno/ImGuizmo.git
 [submodule "Appler/Vendor/GLM"]
-	path = Appler/Vendor/GLM
+	path = ApplerCore/Vendor/GLM
 	url = https://github.com/g-truc/glm.git
 [submodule "Appler/Vendor/STB_IMAGE"]
-	path = Appler/Vendor/STB_IMAGE
+	path = ApplerCore/Vendor/STB_IMAGE
 	url = https://github.com/nothings/stb.git
