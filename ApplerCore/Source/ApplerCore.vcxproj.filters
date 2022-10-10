@@ -31,6 +31,10 @@
       <Filter>ApplerCore\Display</Filter>
     </ClInclude>
     <ClInclude Include="arpch.h" />
+    <ClInclude Include="Platform\OpenGL\ImGuiGLFWRenderer.h" />
+    <ClInclude Include="ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="Platform\OpenGL\ImGuiOpenGLLoader.h" />
+    <ClInclude Include="ApplerCore\Events\Event.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Vendor\GLAD\glad.c">
@@ -45,5 +49,7 @@
     </ClCompile>
     <ClCompile Include="arpch.cpp" />
     <ClCompile Include="stb_image.cpp" />
+    <ClCompile Include="Platform\OpenGL\ImGuiGLFWRenderer.cpp" />
+    <ClCompile Include="Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>

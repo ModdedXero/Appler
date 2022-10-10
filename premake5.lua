@@ -27,7 +27,7 @@ project "ApplerCore"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++latest"
-	staticruntime "On"
+	staticruntime "off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")

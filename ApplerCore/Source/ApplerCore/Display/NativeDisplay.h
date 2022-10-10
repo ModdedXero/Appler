@@ -1,5 +1,7 @@
 #pragma once
 
+#include <ApplerCore/Events/Event.h>
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
@@ -21,6 +23,10 @@ namespace ApplerCore::Display
 	class NativeDisplay
 	{
 	public:
+		NativeDisplay(DisplaySpecs specs = DisplaySpecs());
+
+		Events::Event<int, float> OnTest;
+
 		void OnUpdate();
 		void OnRender();
 		void OnDestroy();
