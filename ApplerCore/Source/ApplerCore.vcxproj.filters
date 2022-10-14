@@ -35,6 +35,10 @@
     <ClInclude Include="ImGuiOpenGLRenderer.h" />
     <ClInclude Include="Platform\OpenGL\ImGuiOpenGLLoader.h" />
     <ClInclude Include="ApplerCore\Events\Event.h" />
+    <ClInclude Include="ApplerCore\Core\Input\Input.h" />
+    <ClInclude Include="ApplerCore\Core\Input\KeyCodes.h" />
+    <ClInclude Include="ApplerCore\Core\Input\MouseCodes.h" />
+    <ClInclude Include="ApplerCore\Core\Application.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Vendor\GLAD\glad.c">
@@ -51,5 +55,7 @@
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="Platform\OpenGL\ImGuiGLFWRenderer.cpp" />
     <ClCompile Include="Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="ApplerCore\Core\Input\Input.cpp" />
+    <ClCompile Include="ApplerCore\Core\Application.cpp" />
   </ItemGroup>
 </Project>

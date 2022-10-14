@@ -139,10 +139,14 @@
   <ItemGroup>
     <ClInclude Include="..\Vendor\ImGUIZMO\ImGuizmo.h" />
     <ClInclude Include="..\Vendor\STB_IMAGE\stb_image.h" />
+    <ClInclude Include="ApplerCore\Core\Input\KeyCodes.h" />
+    <ClInclude Include="ApplerCore\Core\Input\MouseCodes.h" />
     <ClInclude Include="ApplerCore\Display\NativeDisplay.h" />
     <ClInclude Include="ApplerCore\Events\Event.h" />
+    <ClInclude Include="ApplerCore\Core\Application.h" />
     <ClInclude Include="arpch.h" />
     <ClInclude Include="ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="ApplerCore\Core\Input\Input.h" />
     <ClInclude Include="Platform\OpenGL\ImGuiGLFWRenderer.h" />
     <ClInclude Include="Platform\OpenGL\ImGuiOpenGLLoader.h" />
   </ItemGroup>
@@ -155,9 +159,11 @@
     </ClCompile>
     <ClCompile Include="Appler.cpp" />
     <ClCompile Include="ApplerCore\Display\NativeDisplay.cpp" />
+    <ClCompile Include="ApplerCore\Core\Application.cpp" />
     <ClCompile Include="arpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ApplerCore\Core\Input\Input.cpp" />
     <ClCompile Include="Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="Platform\OpenGL\ImGuiGLFWRenderer.cpp" />
     <ClCompile Include="stb_image.cpp">

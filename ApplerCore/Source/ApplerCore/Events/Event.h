@@ -3,7 +3,7 @@
 #include <vector>
 #include <functional>
 
-namespace ApplerCore::Events
+namespace Appler::Events
 {
 	template <typename ...Args>
 	class EventListener

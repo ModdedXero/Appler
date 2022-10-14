@@ -7,7 +7,7 @@
 
 #include <string>
 
-namespace ApplerCore::Display
+namespace Appler::Display
 {
 	struct DisplaySpecs
 	{
@@ -20,12 +20,23 @@ namespace ApplerCore::Display
 		}
 	};
 
+	struct DisplayData
+	{
+		std::string Title;
+		uint32_t Width, Height;
+
+		Events::Event<int, int> KeyPressedEvent;
+		Events::Event<int> KeyReleasedEvent;
+		Events::Event<double, double> MouseMovedEvent;
+		Events::Event<int, int> MouseButtonPressedEvent;
+		Events::Event<double> MouseScrolledEvent;
+		Events::Event<uint32_t, uint32_t> WindowResizeEvent;
+	};
+
 	class NativeDisplay
 	{
 	public:
 		NativeDisplay(DisplaySpecs specs = DisplaySpecs());
-
-		Events::Event<int, float> OnTest;
 
 		void OnUpdate();
 		void OnRender();
@@ -33,13 +44,14 @@ namespace ApplerCore::Display
 
 		bool IsRunning() { return !glfwWindowShouldClose(m_Window); }
 
-		uint32_t GetWidth() { return m_Specs.Width; }
-		uint32_t GetHeight() { return m_Specs.Height; }
+		uint32_t GetWidth() { return m_DisplayData.Width; }
+		uint32_t GetHeight() { return m_DisplayData.Height; }
 
 		GLFWwindow* GetNativeWindow() { return m_Window; }
+		DisplayData& GetDisplayData() { return m_DisplayData; }
 
 	private:
 		GLFWwindow* m_Window;
-		DisplaySpecs m_Specs;
+		DisplayData m_DisplayData;
 	};
 }
