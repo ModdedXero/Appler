@@ -179,7 +179,7 @@
 #define IMGUI_IMPL_OPENGL_MAY_HAVE_EXTENSIONS
 #endif
 
-namespace Wyvern
+namespace Appler
 {
     // OpenGL Data
     struct ImGui_ImplOpenGL3_Data

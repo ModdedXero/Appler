@@ -4,8 +4,29 @@
     <Filter Include="ApplerCore">
       <UniqueIdentifier>{9282FBFC-7E3A-3D4A-E741-16A6D318D83A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ApplerCore\Core">
+      <UniqueIdentifier>{2A1287E8-969D-F4AC-9FAE-77A10BB950AD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ApplerCore\Core\Input">
+      <UniqueIdentifier>{A939249E-15A6-DF98-DE99-77F64AC50101}</UniqueIdentifier>
+    </Filter>
     <Filter Include="ApplerCore\Display">
       <UniqueIdentifier>{F71B3238-E3FF-F28D-4C60-EDE03863DD0F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ApplerCore\Events">
+      <UniqueIdentifier>{3656B62B-A26C-B4C1-EBE3-3FE357398549}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ApplerCore\ImGui">
+      <UniqueIdentifier>{3C1DD4F9-2816-F34B-5148-D8D03DA0D257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ApplerCore\Tools">
+      <UniqueIdentifier>{92EC9CFA-7EE5-BB4C-A717-A1D1936F9B58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Vendor">
       <UniqueIdentifier>{935FDCD7-7F01-07AE-68BC-1A0254FD8DFE}</UniqueIdentifier>
@@ -27,18 +48,55 @@
     <ClInclude Include="..\Vendor\STB_IMAGE\stb_image.h">
       <Filter>Vendor\STB_IMAGE</Filter>
     </ClInclude>
+    <ClInclude Include="ApplerCore\Core\Application.h">
+      <Filter>ApplerCore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\Core\Debug.h">
+      <Filter>ApplerCore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\Core\Input\Input.h">
+      <Filter>ApplerCore\Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\Core\Input\KeyCodes.h">
+      <Filter>ApplerCore\Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\Core\Input\MouseCodes.h">
+      <Filter>ApplerCore\Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\Core\Layer.h">
+      <Filter>ApplerCore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\Core\LayerStack.h">
+      <Filter>ApplerCore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\Core\Timestep.h">
+      <Filter>ApplerCore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\Core\UUID.h">
+      <Filter>ApplerCore\Core</Filter>
+    </ClInclude>
     <ClInclude Include="ApplerCore\Display\NativeDisplay.h">
       <Filter>ApplerCore\Display</Filter>
     </ClInclude>
+    <ClInclude Include="ApplerCore\Events\Event.h">
+      <Filter>ApplerCore\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\ImGui\ImGuiLayer.h">
+      <Filter>ApplerCore\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\Tools\FileSystem.h">
+      <Filter>ApplerCore\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\OpenGL\ImGuiGLFWRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\OpenGL\ImGuiOpenGLLoader.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="arpch.h" />
-    <ClInclude Include="Platform\OpenGL\ImGuiGLFWRenderer.h" />
-    <ClInclude Include="ImGuiOpenGLRenderer.h" />
-    <ClInclude Include="Platform\OpenGL\ImGuiOpenGLLoader.h" />
-    <ClInclude Include="ApplerCore\Events\Event.h" />
-    <ClInclude Include="ApplerCore\Core\Input\Input.h" />
-    <ClInclude Include="ApplerCore\Core\Input\KeyCodes.h" />
-    <ClInclude Include="ApplerCore\Core\Input\MouseCodes.h" />
-    <ClInclude Include="ApplerCore\Core\Application.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Vendor\GLAD\glad.c">
@@ -48,14 +106,37 @@
       <Filter>Vendor\ImGUIZMO</Filter>
     </ClCompile>
     <ClCompile Include="Appler.cpp" />
+    <ClCompile Include="ApplerCore\Core\Application.cpp">
+      <Filter>ApplerCore\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplerCore\Core\Input\Input.cpp">
+      <Filter>ApplerCore\Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplerCore\Core\Layer.cpp">
+      <Filter>ApplerCore\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplerCore\Core\LayerStack.cpp">
+      <Filter>ApplerCore\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplerCore\Core\UUID.cpp">
+      <Filter>ApplerCore\Core</Filter>
+    </ClCompile>
     <ClCompile Include="ApplerCore\Display\NativeDisplay.cpp">
       <Filter>ApplerCore\Display</Filter>
     </ClCompile>
+    <ClCompile Include="ApplerCore\ImGui\ImGuiLayer.cpp">
+      <Filter>ApplerCore\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplerCore\Tools\FileSystem.cpp">
+      <Filter>ApplerCore\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform\OpenGL\ImGuiGLFWRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="arpch.cpp" />
     <ClCompile Include="stb_image.cpp" />
-    <ClCompile Include="Platform\OpenGL\ImGuiGLFWRenderer.cpp" />
-    <ClCompile Include="Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
-    <ClCompile Include="ApplerCore\Core\Input\Input.cpp" />
-    <ClCompile Include="ApplerCore\Core\Application.cpp" />
   </ItemGroup>
 </Project>
