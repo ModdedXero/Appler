@@ -4,7 +4,7 @@
 #include <ApplerCore/Core/Input/Input.h>
 #include <ApplerCore/ImGui/ImGuiLayer.h>
 
-namespace Appler
+namespace Appler::Core
 {
 	Application* Application::s_Application = nullptr;
 

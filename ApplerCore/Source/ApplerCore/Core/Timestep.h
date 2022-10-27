@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Appler
+namespace Appler::Core
 {
 	class Timestep
 	{

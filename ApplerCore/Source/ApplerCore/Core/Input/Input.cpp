@@ -1,7 +1,7 @@
 #include "arpch.h"
 #include "Input.h"
 
-namespace Appler
+namespace Appler::Core
 {
 	std::unordered_map<int, int> Input::m_KeyStates;
 	std::unordered_map<int, int> Input::m_MouseStates;

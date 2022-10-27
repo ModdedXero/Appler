@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace Appler
+namespace Appler::Core
 {
 	class Layer
 	{

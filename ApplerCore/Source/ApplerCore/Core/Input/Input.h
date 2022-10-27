@@ -6,7 +6,7 @@
 #include <ApplerCore/Core/Application.h>
 #include <ApplerCore/Events/Event.h>
 
-namespace Appler
+namespace Appler::Core
 {
 	class Input
 	{

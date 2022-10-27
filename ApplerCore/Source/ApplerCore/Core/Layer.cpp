@@ -1,7 +1,7 @@
 #include "arpch.h"
 #include "Layer.h"
 
-namespace Appler
+namespace Appler::Core
 {
 	Layer::Layer(const std::string& name)
 		: m_DebugName(name)

@@ -6,7 +6,7 @@
 #include <Platform/OpenGL/ImGuiOpenGLRenderer.h>
 #include <Platform/OpenGL/ImGuiGLFWRenderer.h>
 
-namespace Appler
+namespace Appler::Core
 {
 	class ImGuiLayer : public Layer
 	{
@@ -16,8 +16,6 @@ namespace Appler
 
 		void OnAttach() override;
 		void OnDetach() override;
-
-		void OnUIRender() override;
 
 		void Begin();
 		void End();

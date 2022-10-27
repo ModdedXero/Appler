@@ -1,7 +1,7 @@
 #include "arpch.h"
 #include "LayerStack.h"
 
-namespace Appler
+namespace Appler::Core
 {
 	LayerStack::LayerStack()
 	{

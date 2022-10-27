@@ -6,7 +6,7 @@
 #include <ApplerCore/Display/NativeDisplay.h>
 #include <ApplerCore/ImGui/ImGuiLayer.h>
 
-namespace Appler
+namespace Appler::Core
 {
 	class Application
 	{

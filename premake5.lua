@@ -1,6 +1,6 @@
 workspace "Appler"
 	architecture "x64"
-	startproject "ApplerCore"
+	startproject "Appler"
 	
 	configurations
 	{
@@ -24,7 +24,7 @@ include "ApplerCore/Vendor/ImGUI"
 	
 project "ApplerCore"
 	location "ApplerCore/Source"
-	kind "ConsoleApp"
+	kind "StaticLib"
 	language "C++"
 	cppdialect "C++latest"
 	staticruntime "off"
@@ -74,11 +74,65 @@ project "ApplerCore"
 		flags { "NoPCH" }
 	
 	filter "system:windows"
+		staticruntime "On"
 		systemversion "latest"
 		
 		defines
 		{
-			"ApplerCore_PLATFORM_WINDOWS"
+			"AR_PLATFORM_WINDOWS"
+		}
+	
+	filter "configurations:Debug"
+		defines "AR_DEBUG"
+		symbols "On"
+		
+	filter "configurations:Release"
+		defines "AR_RELEASE"
+		optimize "On"
+		
+	filter "configurations:Dist"
+		defines "AR_DIST"
+		optimize "On"
+		
+project "Appler"
+	location "Appler"
+	kind "ConsoleApp"
+	cppdialect "C++latest"
+	language "C++"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	files
+	{
+		"Appler/**.h",
+		"Appler/**.cpp"
+	}
+
+	includedirs
+	{
+		"Appler/Source",
+		"ApplerCore/Source",
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.GLAD}",
+		"%{IncludeDir.GLM}",
+		"%{IncludeDir.STB_IMAGE}",
+		"%{IncludeDir.ImGUI}",
+		"%{IncludeDir.ImGUIZMO}",
+	}
+
+	links
+	{
+		"ApplerCore"
+	}
+
+	filter "system:windows"
+		staticruntime "On"
+		systemversion "latest"
+		
+		defines
+		{
+			"AR_PLATFORM_WINDOWS"
 		}
 	
 	filter "configurations:Debug"

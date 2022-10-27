@@ -2,7 +2,7 @@
 
 #include <xhash>
 
-namespace Appler
+namespace Appler::Core
 {
 	class UUID
 	{
@@ -25,9 +25,9 @@ namespace Appler
 namespace std
 {
 	template<>
-	struct hash<Appler::UUID>
+	struct hash<Appler::Core::UUID>
 	{
-		std::size_t operator ()(const Appler::UUID& uuid) const
+		std::size_t operator ()(const Appler::Core::UUID& uuid) const
 		{
 			return hash<uint64_t>()((uint64_t)uuid);
 		}

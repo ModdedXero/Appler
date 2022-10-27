@@ -5,7 +5,7 @@
 
 #include <ImGuizmo.h>
 
-namespace Appler
+namespace Appler::Core
 {
 	ImGuiLayer::ImGuiLayer()
 		: Layer("ImGuiLayer")
@@ -52,13 +52,6 @@ namespace Appler
 		ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
 		ImGui::DestroyContext();
-	}
-
-	void ImGuiLayer::OnUIRender()
-	{
-		bool show = true;
-		ImGui::DockSpaceOverViewport();
-		ImGui::ShowDemoWindow(&show);
 	}
 
 	void ImGuiLayer::Begin()

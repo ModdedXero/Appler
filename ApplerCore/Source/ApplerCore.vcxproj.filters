@@ -48,7 +48,11 @@
     <ClInclude Include="..\Vendor\STB_IMAGE\stb_image.h">
       <Filter>Vendor\STB_IMAGE</Filter>
     </ClInclude>
+    <ClInclude Include="ApplerCore.h" />
     <ClInclude Include="ApplerCore\Core\Application.h">
+      <Filter>ApplerCore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplerCore\Core\Base.h">
       <Filter>ApplerCore\Core</Filter>
     </ClInclude>
     <ClInclude Include="ApplerCore\Core\Debug.h">
@@ -105,7 +109,6 @@
     <ClCompile Include="..\Vendor\ImGUIZMO\ImGuizmo.cpp">
       <Filter>Vendor\ImGUIZMO</Filter>
     </ClCompile>
-    <ClCompile Include="Appler.cpp" />
     <ClCompile Include="ApplerCore\Core\Application.cpp">
       <Filter>ApplerCore\Core</Filter>
     </ClCompile>

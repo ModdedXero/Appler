@@ -4,7 +4,7 @@
 
 #include <vector>
 
-namespace Appler
+namespace Appler::Core
 {
 	class LayerStack
 	{
